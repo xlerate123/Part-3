@@ -81,6 +81,9 @@ const App = () => {
           setMessage(null)
         }, 5000)
       })
+      .catch((error) => {
+        setErrorMessage(error.response.data.error)
+      })
     }
   }
 
